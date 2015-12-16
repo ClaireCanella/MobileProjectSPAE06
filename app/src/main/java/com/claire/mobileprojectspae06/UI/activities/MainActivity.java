@@ -27,7 +27,7 @@ import com.parse.ParseObject;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button buttonSignUp;
+    private Button btn_new_user;
     private Button buttonValidate;
     private RelativeLayout relativeLayout;
     private EditText emailEditText;
@@ -45,26 +45,19 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        //setSupportActionBar(toolbar);
 
 
-        buttonSignUp = (Button) findViewById(R.id.buttonSignUp);
-        buttonValidate = (Button) findViewById(R.id.buttonValidate);
+
+        btn_new_user = (Button) findViewById(R.id.btn_new_user);
+        buttonValidate = (Button) findViewById(R.id.btn_login);
         relativeLayout = (RelativeLayout) findViewById(R.id.relativeLayout);
-        emailEditText = (EditText) findViewById(R.id.emailEditText);
-        pwdEditText = (EditText) findViewById(R.id.pwdEditText);
-        mImageView = (ImageView) findViewById(R.id.imgView);
-        btnCapture = (Button) findViewById(R.id.btnCapture);
-        btnCapture.setOnClickListener(new View.OnClickListener() {
+        emailEditText = (EditText) findViewById(R.id.email_address);
+        pwdEditText = (EditText) findViewById(R.id.password);
+        //mImageView = (ImageView) findViewById(R.id.imgView);
+        //btnCapture = (Button) findViewById(R.id.btnCapture);
+        /*btnCapture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
@@ -72,9 +65,9 @@ public class MainActivity extends AppCompatActivity {
                     startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
                 }
             }
-        });
+        });*/
 
-        buttonSignUp.setOnClickListener(new View.OnClickListener() {
+        btn_new_user.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 setContentView(R.layout.signup_view);
@@ -100,9 +93,9 @@ public class MainActivity extends AppCompatActivity {
 
         saveButton = (Button) findViewById(R.id.save_button);
 
-        ParseObject testObject = new ParseObject("TestObject");
+        /*ParseObject testObject = new ParseObject("TestObject");
         testObject.put("foo", "bar");
-        testObject.saveInBackground();
+        testObject.saveInBackground();*/
     }
 
     @Override
