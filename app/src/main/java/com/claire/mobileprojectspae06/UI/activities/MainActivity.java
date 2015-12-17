@@ -16,7 +16,9 @@ import com.claire.mobileprojectspae06.MyApp;
 import com.claire.mobileprojectspae06.R;
 import com.claire.mobileprojectspae06.UI.adapters.AnimalsAdapter;
 
+import com.claire.mobileprojectspae06.UserProfile;
 import com.parse.LogInCallback;
+import com.parse.ParseObject;
 import com.parse.ParseUser;
 import java.util.ArrayList;
 
@@ -26,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
 
     protected EditText mEmailLogin_EditText;
     protected EditText mPwdLogin_EditText;
-    protected Button mBtnValidateLogin;
     protected Button mBtnNewUser;
     protected Button mBtnLogin;
     private ImageView mImageView;
@@ -43,15 +44,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-       /*ParseUser currentUser = ParseUser.getCurrentUser();
-        if (currentUser == null) {
-            Intent intent = new Intent(MyApp.getInstance(), LoginActivity.class);
-            startActivity(intent);
-        }*/
+
+        ParseObject testObject = new ParseObject("TestObject");
+        testObject.put("foo", "bar");
+        testObject.saveInBackground();
 
         mEmailLogin_EditText = (EditText)findViewById(R.id.email_address);
         mPwdLogin_EditText = (EditText)findViewById(R.id.password);
-        mBtnValidateLogin = (Button)findViewById(R.id.btn_login);
         mBtnNewUser = (Button) findViewById(R.id.btn_new_user);
         mBtnLogin = (Button) findViewById(R.id.btn_login);
 
@@ -75,7 +74,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MyApp.getInstance(), SignUpActivity.class);
                 startActivity(intent);
-
             }
         });
 
@@ -92,13 +90,14 @@ public class MainActivity extends AppCompatActivity {
                 if (email.isEmpty() || password.isEmpty()) {
                     Toast.makeText(MyApp.getContext(), "Email or Password is empy", Toast.LENGTH_SHORT).show();
                 } else {
-                    System.out.println(mEmailLogin_EditText.getText());
                     ParseUser.logInInBackground(email, password, new LogInCallback() {
                         @Override
                         public void done(ParseUser user, com.parse.ParseException e) {
+                            System.out.println(e);
                             if (e == null) {
                                 // Success!
-                                Intent intent = new Intent(MyApp.getInstance(), MainActivity.class);
+                                Toast.makeText(MyApp.getContext(), "Success !!!!.", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(MyApp.getInstance(), UserProfileActivity.class);
                                 startActivity(intent);
                             } else {
                                 // Fail
