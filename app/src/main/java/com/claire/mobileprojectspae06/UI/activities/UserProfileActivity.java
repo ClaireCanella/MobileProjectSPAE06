@@ -1,10 +1,16 @@
 package com.claire.mobileprojectspae06.UI.activities;
 
+import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 
+import com.claire.mobileprojectspae06.MyApp;
 import com.claire.mobileprojectspae06.R;
 
 
@@ -13,10 +19,31 @@ import com.claire.mobileprojectspae06.R;
  */
 public class UserProfileActivity extends AppCompatActivity {
 
+    private ImageView snap;
+    private ImageView pet1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_profile);
+
+        snap = (ImageView) findViewById(R.id.snap);
+        snap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MyApp.getInstance(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        pet1 = (ImageView) findViewById(R.id.pet1);
+        pet1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MyApp.getInstance(), UserPetProfileActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

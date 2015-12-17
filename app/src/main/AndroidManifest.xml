@@ -11,6 +11,7 @@
     <uses-permission android:name="android.hardware.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:name=".MyApp"
@@ -50,12 +51,12 @@
             android:label="@string/title_activity_signup"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".UI.activities.UserPetProfile"
+            android:name=".UI.activities.UserPetProfileActivity"
             android:label="@string/title_activity_user_dog_profile"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".UI.activities.UserProfileActivity"
-            android:label="@string/title_activity_user_dog_profile"
+            android:label="@string/title_activity_user_profile"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

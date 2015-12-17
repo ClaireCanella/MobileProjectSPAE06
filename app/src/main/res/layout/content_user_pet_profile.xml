@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".UI.activities.UserPetProfile"
+    tools:context=".UI.activities.UserPetProfileActivity"
     tools:showIn="@layout/activity_user_pet_profile">
 
 
@@ -188,6 +188,7 @@
                     android:src="@drawable/location"
                     android:layout_marginTop="5dp"/>
                 <Button
+                    android:id="@+id/refuge"
                     android:layout_width="wrap_content"
                     android:layout_height="20dp"
                     android:text="@string/refugename"
