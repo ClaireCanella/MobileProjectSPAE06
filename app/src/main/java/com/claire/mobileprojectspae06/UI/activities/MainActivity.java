@@ -23,6 +23,12 @@ import com.parse.ParseUser;
 import java.util.ArrayList;
 
 
+import com.parse.LogInCallback;
+import com.parse.ParseObject;
+import com.parse.ParseUser;
+import java.util.ArrayList;
+
+
 public class MainActivity extends AppCompatActivity {
 
     protected EditText mEmailLogin_EditText;
@@ -57,6 +63,8 @@ public class MainActivity extends AppCompatActivity {
         mBtnValidateLogin = (Button)findViewById(R.id.btn_login);
         mBtnNewUser = (Button) findViewById(R.id.btn_new_user);
         mBtnLogin = (Button) findViewById(R.id.btn_login);
+
+
         //mImageView = (ImageView) findViewById(R.id.imgView);
         //btnCapture = (Button) findViewById(R.id.btnCapture);
         /*btnCapture.setOnClickListener(new View.OnClickListener() {
@@ -76,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MyApp.getInstance(), SignUpActivity.class);
                 startActivity(intent);
+
             }
         });
 
