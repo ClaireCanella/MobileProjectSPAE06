@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".UI.activities.UserDogProfile"
+    tools:showIn="@layout/activity_user_dog_profile">
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:src="@drawable/img_youpi" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/username"
+                android:layout_toEndOf="@+id/username"
+                android:layout_toRightOf="@+id/username"
+                android:letterSpacing="0.1"
+                android:text="@string/username1"
+                android:textColor="@color/colorApp"
+                android:textStyle="bold" />
+
+            <!-- pet's preference -->
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView3"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@+id/username"
+                android:layout_toRightOf="@+id/username"
+                android:src="@drawable/pref" />
+
+            <TextView
+                android:id="@+id/favoritepet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/imageView"
+                android:layout_marginBottom="-3dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/imageView"
+                android:layout_toRightOf="@+id/imageView"
+                android:text="@string/favoritedog"
+                android:textSize="12sp" />
+
+
+            <!-- user location -->
+            <ImageView
+                android:id="@+id/imageViewLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/favoritepet"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@+id/username"
+                android:layout_toRightOf="@+id/username"
+                android:src="@drawable/location_user" />
+
+            <TextView
+                android:id="@+id/userlocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/favoritepet"
+                android:layout_alignStart="@+id/favoritepet"
+                android:layout_alignTop="@+id/imageViewLocation"
+                android:text="@string/userlocation"
+                android:textSize="12sp" />
+
+
+            <!-- PET1 -->
+            <ImageView
+                android:id="@+id/pet1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/username"
+                android:background="@color/bgpet1"
+                android:padding="25dp"
+                android:src="@drawable/img_youpi" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/notif_urgent"
+                android:layout_marginTop="31dp"
+                android:layout_alignTop="@+id/pet1"
+                android:layout_toLeftOf="@+id/imageViewLocation"
+                android:layout_toStartOf="@+id/imageViewLocation"
+                android:layout_marginRight="12dp"
+                android:layout_marginEnd="12dp"
+                android:id="@+id/imageView2" />
+
+            <TextView
+                android:id="@+id/petname1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/pet1"
+                android:layout_alignEnd="@+id/pet1"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignRight="@+id/pet1"
+                android:layout_marginBottom="5dp"
+                android:letterSpacing="0.1"
+                android:text="@string/petname1"
+                android:textAlignment="center"
+                android:textColor="@color/white_opacity"
+                android:textSize="10sp" />
+
+
+            <!-- PET2 -->
+            <ImageView
+                android:id="@+id/pet2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/pet1"
+                android:layout_toEndOf="@+id/pet1"
+                android:layout_toRightOf="@+id/pet1"
+                android:background="@color/bgpet2"
+                android:padding="25dp"
+                android:src="@drawable/img_chapie" />
+
+            <TextView
+                android:id="@+id/petname2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/pet1"
+                android:layout_alignEnd="@+id/pet2"
+                android:layout_alignRight="@+id/pet2"
+                android:layout_marginBottom="5dp"
+                android:layout_toEndOf="@+id/pet1"
+                android:layout_toRightOf="@+id/pet1"
+                android:letterSpacing="0.1"
+                android:text="@string/petname2"
+                android:textAlignment="center"
+                android:textColor="@color/white_opacity"
+                android:textSize="10sp" />
+
+            <!-- PET3 -->
+            <ImageView
+                android:id="@+id/pet3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/pet2"
+                android:layout_toEndOf="@+id/pet2"
+                android:layout_toRightOf="@+id/pet2"
+                android:background="@color/bgpet3"
+                android:padding="25dp"
+                android:src="@drawable/img_georges" />
+
+            <TextView
+                android:id="@+id/petname3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/pet2"
+                android:layout_alignEnd="@+id/pet3"
+                android:layout_alignRight="@+id/pet3"
+                android:layout_marginBottom="5dp"
+                android:layout_toEndOf="@+id/pet2"
+                android:layout_toRightOf="@+id/pet2"
+                android:letterSpacing="0.1"
+                android:text="@string/petname3"
+                android:textAlignment="center"
+                android:textColor="@color/white_opacity"
+                android:textSize="10sp" />
+
+            <!-- PET4 -->
+            <ImageView
+                android:id="@+id/pet4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/pet1"
+                android:background="@color/bgpet4"
+                android:padding="25dp"
+                android:src="@drawable/img_woofie" />
+
+            <TextView
+                android:id="@+id/petname4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/pet4"
+                android:layout_alignEnd="@+id/imageView"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignRight="@+id/imageView"
+                android:layout_marginBottom="7dp"
+                android:letterSpacing="0.1"
+                android:text="@string/petname4"
+                android:textAlignment="center"
+                android:textColor="@color/white_opacity"
+                android:textSize="10sp" />
+
+            <!-- PET5 -->
+            <ImageView
+                android:id="@+id/pet5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/pet4"
+                android:layout_centerHorizontal="true"
+                android:background="@color/bgpet5"
+                android:padding="25dp"
+                android:src="@drawable/img_nabu" />
+
+            <TextView
+                android:id="@+id/petname5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/userlocation"
+                android:layout_alignRight="@+id/userlocation"
+                android:layout_alignTop="@+id/petname4"
+                android:layout_toEndOf="@+id/petname4"
+                android:layout_toRightOf="@+id/petname4"
+                android:letterSpacing="0.1"
+                android:text="@string/petname5"
+                android:textAlignment="center"
+                android:textColor="@color/white_opacity"
+                android:textSize="10sp" />
+
+            <!-- PET6 -->
+            <ImageView
+                android:id="@+id/pet6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/pet3"
+                android:background="@color/bgpet6"
+                android:padding="25dp"
+                android:src="@drawable/img_akis" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/notif_urgent"
+                android:layout_below="@+id/pet3"
+                android:layout_alignLeft="@+id/snap"
+                android:layout_alignStart="@+id/snap"
+                android:layout_marginLeft="13dp"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="28dp" />
+
+            <TextView
+                android:id="@+id/petname6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.1"
+                android:text="@string/petname6"
+                android:textAlignment="center"
+                android:textColor="@color/white_opacity"
+                android:textSize="10sp"
+                android:layout_alignTop="@+id/petname5"
+                android:layout_toRightOf="@+id/userlocation"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <!-- PET7 -->
+            <ImageView
+                android:id="@+id/pet7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/petname4"
+                android:background="@color/bgpet7"
+                android:padding="25dp"
+                android:src="@drawable/img_djobi" />
+
+            <TextView
+                android:id="@+id/petname7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/pet7"
+                android:layout_alignEnd="@+id/pet7"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignRight="@+id/pet7"
+                android:layout_marginBottom="9dp"
+                android:letterSpacing="0.1"
+                android:text="@string/petname7"
+                android:textAlignment="center"
+                android:textColor="@color/white_opacity"
+                android:textSize="10sp" />
+
+            <!-- PET8 -->
+            <ImageView
+                android:id="@+id/pet8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pet5"
+                android:layout_toEndOf="@+id/pet4"
+                android:layout_toRightOf="@+id/pet4"
+                android:background="@color/bgpet8"
+                android:padding="25dp"
+                android:src="@drawable/img_djoba" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/notif_urgent"
+                android:layout_alignTop="@+id/pet8"
+                android:layout_toLeftOf="@+id/pet9"
+                android:layout_toStartOf="@+id/pet9"
+                android:layout_marginRight="23dp"
+                android:layout_marginEnd="23dp"
+                android:layout_marginTop="26dp" />
+
+            <TextView
+                android:id="@+id/petname8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/pet8"
+                android:layout_alignRight="@+id/pet8"
+                android:layout_alignTop="@+id/petname7"
+                android:layout_toRightOf="@+id/pet7"
+                android:letterSpacing="0.1"
+                android:text="@string/petname8"
+                android:textAlignment="center"
+                android:textColor="@color/white_opacity"
+                android:textSize="10sp" />
+
+            <!-- PET9 -->
+            <ImageView
+                android:id="@+id/pet9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/pet8"
+                android:background="@color/bgpet9"
+                android:padding="25dp"
+                android:src="@drawable/img_neo" />
+
+            <TextView
+                android:id="@+id/petname9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/pet9"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignStart="@+id/pet9"
+                android:layout_alignTop="@+id/petname8"
+                android:letterSpacing="0.1"
+                android:text="@string/petname9"
+                android:textAlignment="center"
+                android:textColor="@color/white_opacity"
+                android:textSize="10sp" />
+
+            <!-- PET10 -->
+            <ImageView
+                android:id="@+id/pet10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pet7"
+                android:layout_toLeftOf="@+id/favoritepet"
+                android:layout_toStartOf="@+id/favoritepet"
+                android:background="@color/bgpet10"
+                android:padding="25dp"
+                android:src="@drawable/img_paki" />
+            <TextView
+                android:id="@+id/petname10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.1"
+                android:text="@string/petname10"
+                android:textAlignment="center"
+                android:textColor="@color/white_opacity"
+                android:textSize="10sp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignRight="@+id/imageView"
+                android:layout_alignEnd="@+id/imageView"
+                android:layout_marginBottom="38dp"
+                android:layout_alignLeft="@+id/pet10"
+                android:layout_alignStart="@+id/pet10" />
+
+            <!-- PET11 -->
+            <ImageView
+                android:id="@+id/pet11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/bgpet11"
+                android:padding="25dp"
+                android:src="@drawable/img_snow"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/pet10"
+                android:layout_toEndOf="@+id/pet10" />
+            <TextView
+                android:id="@+id/petname11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.1"
+                android:text="@string/petname11"
+                android:textAlignment="center"
+                android:textColor="@color/white_opacity"
+                android:textSize="10sp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="38dp"
+                android:layout_alignLeft="@+id/pet11"
+                android:layout_alignStart="@+id/pet11"
+                android:layout_alignRight="@+id/pet8"
+                android:layout_alignEnd="@+id/pet8" />
+
+            <!-- PET12 -->
+            <ImageView
+                android:id="@+id/pet12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/bgpet12"
+                android:padding="25dp"
+                android:src="@drawable/img_pacca"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/pet8"
+                android:layout_toEndOf="@+id/pet8" />
+            <TextView
+                android:id="@+id/petname12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.1"
+                android:text="@string/petname12"
+                android:textAlignment="center"
+                android:textColor="@color/white_opacity"
+                android:textSize="10sp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="38dp"
+                android:layout_alignLeft="@+id/pet12"
+                android:layout_alignStart="@+id/pet12"
+                android:layout_alignRight="@+id/pet9"
+                android:layout_alignEnd="@+id/pet9" />
+
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>

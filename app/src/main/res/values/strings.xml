@@ -26,11 +26,11 @@
     <string name="username1">Charlotte</string>
     <string name="userlocation">Aix-en-Provence (13)</string>
 
-    
+
     <!-- BDD PET -->
     <string name="favoritedog">Préférence pour les chiens</string>
     <string name="favoritecat">Préférence pour les chats</string>
-    
+
     <!-- pet's name -->
     <string name="petname1">Youpi</string>
     <string name="petname2">Chapie</string>
@@ -44,4 +44,5 @@
     <string name="petname10">Paki</string>
     <string name="petname11">Snow</string>
     <string name="petname12">Pacca</string>
+    <string name="title_activity_user_dog_profile">userDogProfile</string>
 </resources>
