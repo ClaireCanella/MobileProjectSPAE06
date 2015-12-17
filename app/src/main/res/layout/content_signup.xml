@@ -17,7 +17,7 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="24dp"
         android:alpha="0.7"
         android:gravity="center"
         android:letterSpacing="0.1"
@@ -147,28 +147,21 @@
         android:textSize="12sp" />
 
     <!-- upload photo -->
-    <Button
+    <ImageButton
         android:id="@+id/btn_photo"
         android:layout_width="wrap_content"
-        android:layout_height="80dp"
-        android:layout_alignEnd="@+id/location"
-        android:layout_alignRight="@+id/location"
-        android:layout_alignTop="@+id/location"
-        android:layout_marginTop="73dp"
-        android:background="@drawable/button_dashed_border"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp"
-        android:text="@string/upload"
-        android:textColor="#78ffffff"
-        android:textSize="12sp" />
+        android:layout_height="wrap_content"
+        android:src="@drawable/btn_love"
+        android:background="@color/transparent"
+        android:layout_alignTop="@+id/switch1"
+        android:layout_toRightOf="@+id/relativeLayout"
+        android:layout_toEndOf="@+id/relativeLayout" />
 
 
     <Button
         android:id="@+id/btn_login_register"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:layout_alignEnd="@+id/btn_photo"
-        android:layout_alignRight="@+id/btn_photo"
         android:layout_below="@+id/switch1"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="50dp"
@@ -176,7 +169,9 @@
         android:singleLine="true"
         android:text="@string/register"
         android:textAllCaps="false"
-        android:textColor="#fff" />
+        android:textColor="#fff"
+        android:layout_alignRight="@+id/location"
+        android:layout_alignEnd="@+id/location" />
 
 
     <Button

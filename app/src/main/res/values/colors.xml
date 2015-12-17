@@ -7,10 +7,20 @@
     <color name="colorApp">#50e3c2</color>
     <color name="white">#fff</color>
     <color name="white_opacity">#78ffffff</color>
+    <color name="transparent">#00ffffff</color>
 
 
     <!-- background pet's colors -->
     <color name="bgpet1">#5431bd</color>
     <color name="bgpet2">#4f45bb</color>
     <color name="bgpet3">#4a59b9</color>
+    <color name="bgpet4">#456db7</color>
+    <color name="bgpet5">#4081b5</color>
+    <color name="bgpet6">#3d8bb4</color>
+    <color name="bgpet7">#389fb2</color>
+    <color name="bgpet8">#36a9b1</color>
+    <color name="bgpet9">#3ececd</color>
+    <color name="bgpet10">#63e9e8</color>
+    <color name="bgpet11">#80fdfe</color>
+    <color name="bgpet12">#59e7e8</color>
 </resources>

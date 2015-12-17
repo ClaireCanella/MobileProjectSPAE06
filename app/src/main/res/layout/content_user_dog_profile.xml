@@ -4,10 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fafafa"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.claire.mobileprojectspae06.UserProfile"
-    tools:showIn="@layout/activity_user_profile">
+    tools:context=".UI.activities.UserDogProfile"
+    tools:showIn="@layout/activity_user_dog_profile">
 
 
     <android.support.v4.widget.NestedScrollView
@@ -23,7 +22,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                android:src="@drawable/img_user_charlotte" />
+                android:src="@drawable/img_youpi" />
 
             <TextView
                 android:id="@+id/textView3"
@@ -83,16 +82,6 @@
                 android:text="@string/userlocation"
                 android:textSize="12sp" />
 
-            <!-- notifications -->
-            <ImageView
-                android:id="@+id/snap"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignTop="@+id/textView3"
-                android:paddingRight="20dp"
-                android:src="@drawable/btn_notifs" />
 
             <!-- PET1 -->
             <ImageView
@@ -461,5 +450,3 @@
     </android.support.v4.widget.NestedScrollView>
 
 </RelativeLayout>
-
-
