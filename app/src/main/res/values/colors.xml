@@ -6,8 +6,11 @@
     <!-- <color name="colorLogo">#36a9b1</color> -->
     <color name="colorApp">#50e3c2</color>
     <color name="white">#fff</color>
+    <color name="white_opacity">#78ffffff</color>
 
 
     <!-- background pet's colors -->
     <color name="bgpet1">#5431bd</color>
+    <color name="bgpet2">#4f45bb</color>
+    <color name="bgpet3">#4a59b9</color>
 </resources>

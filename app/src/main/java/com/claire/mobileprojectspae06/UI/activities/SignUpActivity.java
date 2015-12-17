@@ -12,8 +12,10 @@ import android.widget.Toast;
 
 import com.claire.mobileprojectspae06.MyApp;
 import com.claire.mobileprojectspae06.R;
+import com.parse.ParseException;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
+import com.parse.SignUpCallback;
 
 
 /**
@@ -21,9 +23,10 @@ import com.parse.SaveCallback;
  */
 public class SignUpActivity extends AppCompatActivity {
 
-    protected EditText emailField;
-    protected EditText pwdField;
-    protected Button validateBtn;
+    private EditText emailField;
+    private EditText pwdField;
+    private Button validateBtn;
+    private Button mAlreadyUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +36,8 @@ public class SignUpActivity extends AppCompatActivity {
         emailField = (EditText) findViewById(R.id.email_address);
         pwdField = (EditText) findViewById(R.id.password);
 
-        validateBtn = (Button) findViewById(R.id.btn_login);
+        validateBtn = (Button) findViewById(R.id.btn_login_register);
+
         validateBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -50,20 +54,30 @@ public class SignUpActivity extends AppCompatActivity {
                     final ParseUser newUser = new ParseUser();
                     newUser.setEmail(email);
                     newUser.setPassword(pwd);
-                    newUser.saveInBackground(new SaveCallback() {
-                        @Override
-                        public void done(com.parse.ParseException e) {
-                            if ( e == null) {
+                    newUser.signUpInBackground(new SignUpCallback() {
+                        public void done(ParseException e) {
+                            if (e == null) {
                                 // Success!
-                                Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
+                                Intent intent = new Intent(MyApp.getInstance(), UserProfileActivity.class);
                                 startActivity(intent);
+                                finish();
                             } else {
-                                Toast.makeText(MyApp.getContext(), "Fail", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(MyApp.getContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
                             }
                         }
 
                     });
                 }
+            }
+        });
+
+        mAlreadyUser = (Button) findViewById(R.id.already_user);
+        mAlreadyUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MyApp.getInstance(), MainActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
     }

@@ -20,8 +20,8 @@ import com.claire.mobileprojectspae06.UserProfile;
 import com.parse.LogInCallback;
 import com.parse.ParseObject;
 import com.parse.ParseUser;
-import java.util.ArrayList;
 
+import java.util.ArrayList;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -53,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
         mPwdLogin_EditText = (EditText)findViewById(R.id.password);
         mBtnNewUser = (Button) findViewById(R.id.btn_new_user);
         mBtnLogin = (Button) findViewById(R.id.btn_login);
-
 
         //mImageView = (ImageView) findViewById(R.id.imgView);
         //btnCapture = (Button) findViewById(R.id.btnCapture);

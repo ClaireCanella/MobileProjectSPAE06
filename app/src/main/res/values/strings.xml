@@ -30,4 +30,9 @@
     <!-- BDD PET -->
     <string name="favoritedog">Préférence pour les chiens</string>
     <string name="favoritecat">Préférence pour les chats</string>
+    
+    <!-- pet's name -->
+    <string name="petname1">Youpi</string>
+    <string name="petname2">Chapie</string>
+    <string name="petname3">Georges</string>
 </resources>
