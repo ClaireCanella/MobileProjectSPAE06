@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/register_bg">
 
+    <!-- Title - Inscription -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -14,7 +14,7 @@
         android:textColor="#ffffff"
         android:alpha="0.7"
         android:textSize="16sp"
-        android:layout_marginTop="31dp"
+        android:layout_marginTop="41dp"
         android:letterSpacing="0.1"
         android:gravity="center"
         android:id="@+id/textView" />
@@ -35,137 +35,156 @@
         </View>
     </RelativeLayout>
 
-    <EditText
+
+    <!--  Email -->
+    <com.rengwuxian.materialedittext.MaterialEditText
         android:id="@+id/email_address"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:hint="@string/email_hint"
-        android:textColorHint="#fff"
-        android:layout_marginTop="40dp"
         android:inputType="textEmailAddress"
         android:textSize="12sp"
-        android:textColor="#fff"
-        android:alpha="0.7"
+        android:layout_marginTop="20dp"
         android:letterSpacing="0.1"
+        app:met_iconLeft="@drawable/icon_inscription_mail"
+        app:met_baseColor="@color/white"
+        app:met_primaryColor="@color/colorApp"
+        app:met_errorColor="#fa4444"
+        app:met_underlineColor="@color/white"
         android:layout_below="@+id/relativeLayout"
-        android:layout_marginLeft="30dp" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/icon_inscription_mail"
-        android:id="@+id/imageView"
-        android:layout_marginTop="45dp"
-        android:layout_below="@+id/relativeLayout"/>
+        app:met_floatingLabel="normal" />
 
 
-    <EditText
+    <!--  Pseudo -->
+    <com.rengwuxian.materialedittext.MaterialEditText
         android:id="@+id/username"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textColorHint="#fff"
-        android:textSize="12sp"
-        android:textColor="#fff"
-        android:alpha="0.7"
-        android:letterSpacing="0.1"
         android:hint="@string/pseudo"
         android:inputType="textPersonName"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="30dp"
-        android:layout_below="@+id/email_address"/>
+        app:met_iconLeft="@drawable/icon_user"
+        android:layout_below="@+id/email_address"
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/icon_user"
-        android:id="@+id/imageView"
-        android:layout_marginTop="23dp"
-        android:layout_below="@+id/email_address"/>
-
-
-    <EditText
-        android:id="@+id/password"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textColorHint="#fff"
         android:textSize="12sp"
-        android:textColor="#fff"
-        android:alpha="0.7"
+        android:layout_marginTop="10dp"
         android:letterSpacing="0.1"
+        app:met_baseColor="@color/white"
+        app:met_primaryColor="@color/colorApp"
+        app:met_errorColor="#fa4444"
+        app:met_underlineColor="@color/white"
+        app:met_floatingLabel="normal"/>
+
+    <!--  Password -->
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/password"
         android:hint="@string/pswd_hint"
         android:inputType="textPassword"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="30dp"
-        android:layout_below="@+id/username"/>
+        app:met_iconLeft="@drawable/icon_password"
+        android:layout_below="@+id/username"
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/icon_password"
-        android:id="@+id/imageView"
-        android:layout_marginTop="23dp"
-        android:layout_below="@+id/username"/>
-
-
-    <EditText
-        android:id="@+id/number"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textColorHint="#fff"
         android:textSize="12sp"
-        android:textColor="#fff"
-        android:alpha="0.7"
+        android:layout_marginTop="10dp"
         android:letterSpacing="0.1"
-        android:hint="@string/phone_number"
-        android:inputType="number"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="30dp"
-        android:layout_below="@+id/password"/>
+        app:met_baseColor="@color/white"
+        app:met_primaryColor="@color/colorApp"
+        app:met_errorColor="#fa4444"
+        app:met_underlineColor="@color/white"
+        app:met_floatingLabel="normal"
+        app:met_minCharacters="8"/>
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/icon_inscription_call"
-        android:id="@+id/imageView"
-        android:layout_marginTop="23dp"
-        android:layout_below="@+id/password"/>
-
-
-
-    <EditText
+    <!--  Location -->
+    <com.rengwuxian.materialedittext.MaterialEditText
         android:id="@+id/location"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textColorHint="#fff"
-        android:textSize="12sp"
-        android:textColor="#fff"
-        android:alpha="0.7"
-        android:letterSpacing="0.1"
         android:hint="@string/location"
         android:inputType="textAutoComplete"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="30dp"
-        android:layout_below="@+id/number"/>
+        app:met_iconLeft="@drawable/icon_inscription_location"
+        android:layout_below="@+id/password"
+        app:met_maxCharacters="10"
 
-    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:letterSpacing="0.1"
+        app:met_baseColor="@color/white"
+        app:met_primaryColor="@color/colorApp"
+        app:met_errorColor="#fa4444"
+        app:met_underlineColor="@color/white"
+        app:met_floatingLabel="normal"/>
+
+
+    <Switch
+        android:id="@+id/switch1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/icon_inscription_location"
-        android:id="@+id/imageView"
-        android:layout_marginTop="23dp"
-        android:layout_below="@+id/number"/>
+        android:text="@string/dog"
+        android:textColor="#78ffffff"
+        android:textSize="12sp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="35dp"
+        android:switchPadding="10dp"
+        android:letterSpacing="0.1"
 
+        android:layout_below="@+id/location" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cat"
+        android:id="@+id/textView2"
+        android:textColor="#78ffffff"
+        android:textSize="12sp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="6dp"
+        android:layout_alignTop="@+id/switch1"
+        android:layout_toRightOf="@+id/switch1"
+        android:layout_toEndOf="@+id/switch1" />
+
+    <!-- upload photo -->
+    <Button
+        android:id="@+id/btn_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:text="@string/upload"
+        android:background="@drawable/button_dashed_border"
+        android:textColor="#78ffffff"
+        android:textSize="12sp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_alignTop="@+id/location"
+        android:layout_alignRight="@+id/location"
+        android:layout_alignEnd="@+id/location"
+        android:layout_marginTop="73dp" />
 
 
     <Button
+        android:id="@+id/btn_login_register"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:background="#50e3c2"
-        android:id="@+id/button"
-        android:layout_below="@+id/location"
-        android:layout_marginTop="34dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="16dp"
         android:singleLine="true"
-        android:text="@string/btn_new_user"
+        android:text="@string/register"
         android:textColor="#fff"
-        android:textAllCaps="false"/>
+        android:textAllCaps="false"
+        android:layout_below="@+id/switch1"
+        android:layout_alignRight="@+id/btn_photo"
+        android:layout_alignEnd="@+id/btn_photo" />
+
+
+    <Button
+        android:id="@+id/btn_new_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00ffffff"
+        android:layout_below="@+id/btn_login_register"
+        android:layout_centerInParent="true"
+        android:singleLine="true"
+        android:text="@string/already_user"
+        android:textColor="@color/white"
+        android:textAllCaps="false" />
+
+
 </RelativeLayout>

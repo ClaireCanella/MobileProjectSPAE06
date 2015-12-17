@@ -2,15 +2,22 @@
     <string name="app_name">Mobile Project SPA E06</string>
     <string name="action_settings">Settings</string>
 
-
+    <!--  MAIN -->
     <string name="registration">INSCRIPTION</string>
     <string name="connection">CONNEXION</string>
     <string name="email_hint">ADRESSE EMAIL</string>
     <string name="pswd_hint">MOT DE PASSE</string>
     <string name="next">Continuer</string>
     <string name="btn_new_user"><u>Nouveau ? S\'inscrire</u></string>
+
+    <!-- SIGNUP -->
     <string name="pseudo">PSEUDO</string>
     <string name="phone_number">NUMÉRO DE TÉLÉPHONE</string>
     <string name="location">DÉPARTEMENT</string>
+    <string name="register">S\'inscrire</string>
+    <string name="already_user"><u>J\'ai déjà un compte</u></string>
+    <string name="dog">CHIEN</string>
+    <string name="cat">CHAT</string>
+    <string name="upload">VOTRE PHOTO</string>
 
 </resources>
