@@ -50,11 +50,11 @@
             android:label="@string/title_activity_signup"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".UI.activities.LoginActivity"
-            android:label="Login view"
+            android:name=".UI.activities.UserPetProfile"
+            android:label="@string/title_activity_user_dog_profile"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
-            android:name=".UI.activities.UserDogProfile"
+            android:name=".UI.activities.UserProfileActivity"
             android:label="@string/title_activity_user_dog_profile"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>

@@ -6,9 +6,9 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:background="#fafafa"
-    tools:context=".UI.activities.UserDogProfile">
+    tools:context=".UI.activities.UserPetProfile">
 
-    <include layout="@layout/content_user_dog_profile" />
+    <include layout="@layout/content_user_pet_profile" />
 
 
 </android.support.design.widget.CoordinatorLayout>

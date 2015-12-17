@@ -59,7 +59,8 @@
                 android:layout_toEndOf="@+id/imageView"
                 android:layout_toRightOf="@+id/imageView"
                 android:text="@string/favoritedog"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                android:textColor="@color/textColor"/>
 
 
             <!-- user location -->
@@ -81,7 +82,8 @@
                 android:layout_alignStart="@+id/favoritepet"
                 android:layout_alignTop="@+id/imageViewLocation"
                 android:text="@string/userlocation"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                android:textColor="@color/textColor"/>
 
             <!-- notifications -->
             <ImageView

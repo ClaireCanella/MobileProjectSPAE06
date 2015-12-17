@@ -45,4 +45,15 @@
     <string name="petname11">Snow</string>
     <string name="petname12">Pacca</string>
     <string name="title_activity_user_dog_profile">userDogProfile</string>
+
+    <!-- dog profile -->
+    <string name="petbirthday">2 ans</string>
+    <string name="petgender">Femelle</string>
+    <string name="petsize">Élancée</string>
+    <string name="pettemper">Sociable et tendre</string>
+    <string name="petrace">Chien Bouvier bernois</string>
+    <string name="interested">4 intéressés</string>
+
+    <!-- BDD REFUGE -->
+    <string name="refugename"><u>Refuge "de Menois"</u></string>
 </resources>
