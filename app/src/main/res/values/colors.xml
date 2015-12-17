@@ -7,4 +7,7 @@
     <color name="colorApp">#50e3c2</color>
     <color name="white">#fff</color>
 
+
+    <!-- background pet's colors -->
+    <color name="bgpet1">#5431bd</color>
 </resources>

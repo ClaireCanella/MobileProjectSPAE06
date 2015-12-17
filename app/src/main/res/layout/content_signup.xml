@@ -4,40 +4,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@drawable/register_bg"
+
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@drawable/register_bg"
     tools:context="com.claire.mobileprojectspae06.UI.activities.Signup">
 
     <!-- Title - Inscription -->
     <TextView
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:alpha="0.7"
+        android:gravity="center"
+        android:letterSpacing="0.1"
         android:text="@string/registration"
         android:textColor="#ffffff"
-        android:alpha="0.7"
-        android:textSize="16sp"
-        android:layout_marginTop="26dp"
-        android:letterSpacing="0.1"
-        android:gravity="center"
-        android:id="@+id/textView" />
+        android:textSize="16sp" />
 
     <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
-        android:id="@+id/relativeLayout"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/textView">
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp">
+
         <View
             android:id="@+id/myRectangleView"
             android:layout_width="181dp"
             android:layout_height="2dp"
-            android:background="@drawable/rectangle">
-        </View>
+            android:background="@drawable/rectangle"></View>
     </RelativeLayout>
 
 
@@ -46,149 +46,150 @@
         android:id="@+id/email_address"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_marginTop="20dp"
         android:hint="@string/email_hint"
         android:inputType="textEmailAddress"
-        android:textSize="12sp"
-        android:layout_marginTop="20dp"
         android:letterSpacing="0.1"
-        app:met_iconLeft="@drawable/icon_inscription_mail"
+        android:textSize="12sp"
         app:met_baseColor="@color/white"
-        app:met_primaryColor="@color/colorApp"
         app:met_errorColor="#fa4444"
-        app:met_underlineColor="@color/white"
-        android:layout_below="@+id/relativeLayout"
-        app:met_floatingLabel="normal" />
+        app:met_floatingLabel="normal"
+        app:met_iconLeft="@drawable/icon_inscription_mail"
+        app:met_primaryColor="@color/colorApp"
+        app:met_underlineColor="@color/white" />
 
 
     <!--  Pseudo -->
     <com.rengwuxian.materialedittext.MaterialEditText
         android:id="@+id/username"
-        android:hint="@string/pseudo"
-        android:inputType="textPersonName"
-        app:met_iconLeft="@drawable/icon_user"
-        android:layout_below="@+id/email_address"
-
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textSize="12sp"
+        android:layout_below="@+id/email_address"
         android:layout_marginTop="10dp"
+
+        android:hint="@string/pseudo"
+        android:inputType="textPersonName"
         android:letterSpacing="0.1"
+        android:textSize="12sp"
         app:met_baseColor="@color/white"
-        app:met_primaryColor="@color/colorApp"
         app:met_errorColor="#fa4444"
-        app:met_underlineColor="@color/white"
-        app:met_floatingLabel="normal"/>
+        app:met_floatingLabel="normal"
+        app:met_iconLeft="@drawable/icon_user"
+        app:met_primaryColor="@color/colorApp"
+        app:met_underlineColor="@color/white" />
 
     <!--  Password -->
     <com.rengwuxian.materialedittext.MaterialEditText
         android:id="@+id/password"
-        android:hint="@string/pswd_hint"
-        android:inputType="textPassword"
-        app:met_iconLeft="@drawable/icon_password"
-        android:layout_below="@+id/username"
-
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textSize="12sp"
+        android:layout_below="@+id/username"
         android:layout_marginTop="10dp"
+
+        android:hint="@string/pswd_hint"
+        android:inputType="textPassword"
         android:letterSpacing="0.1"
+        android:textSize="12sp"
         app:met_baseColor="@color/white"
-        app:met_primaryColor="@color/colorApp"
         app:met_errorColor="#fa4444"
-        app:met_underlineColor="@color/white"
         app:met_floatingLabel="normal"
-        app:met_minCharacters="8"/>
+        app:met_iconLeft="@drawable/icon_password"
+        app:met_minCharacters="8"
+        app:met_primaryColor="@color/colorApp"
+        app:met_underlineColor="@color/white" />
 
     <!--  Location -->
     <com.rengwuxian.materialedittext.MaterialEditText
         android:id="@+id/location"
-        android:hint="@string/location"
-        android:inputType="textAutoComplete"
-        app:met_iconLeft="@drawable/icon_inscription_location"
-        android:layout_below="@+id/password"
-        app:met_maxCharacters="10"
-
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textSize="12sp"
+        android:layout_below="@+id/password"
+        android:hint="@string/location"
+        android:inputType="textAutoComplete"
+
         android:letterSpacing="0.1"
+        android:textSize="12sp"
         app:met_baseColor="@color/white"
-        app:met_primaryColor="@color/colorApp"
         app:met_errorColor="#fa4444"
-        app:met_underlineColor="@color/white"
-        app:met_floatingLabel="normal"/>
+        app:met_floatingLabel="normal"
+        app:met_iconLeft="@drawable/icon_inscription_location"
+        app:met_primaryColor="@color/colorApp"
+        app:met_underlineColor="@color/white" />
 
 
     <Switch
         android:id="@+id/switch1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/dog"
-        android:textColor="#78ffffff"
-        android:textSize="12sp"
+        android:layout_below="@+id/location"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="35dp"
-        android:switchPadding="10dp"
         android:letterSpacing="0.1"
+        android:switchPadding="10dp"
+        android:text="@string/dog"
+        android:textColor="#78ffffff"
 
-        android:layout_below="@+id/location" />
+        android:textSize="12sp" />
 
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/cat"
-        android:id="@+id/textView2"
-        android:textColor="#78ffffff"
-        android:textSize="12sp"
+        android:layout_alignTop="@+id/switch1"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="6dp"
-        android:layout_alignTop="@+id/switch1"
+        android:layout_toEndOf="@+id/switch1"
         android:layout_toRightOf="@+id/switch1"
-        android:layout_toEndOf="@+id/switch1" />
+        android:text="@string/cat"
+        android:textColor="#78ffffff"
+        android:textSize="12sp" />
 
     <!-- upload photo -->
     <Button
         android:id="@+id/btn_photo"
         android:layout_width="wrap_content"
         android:layout_height="80dp"
-        android:text="@string/upload"
+        android:layout_alignEnd="@+id/location"
+        android:layout_alignRight="@+id/location"
+        android:layout_alignTop="@+id/location"
+        android:layout_marginTop="73dp"
         android:background="@drawable/button_dashed_border"
-        android:textColor="#78ffffff"
-        android:textSize="12sp"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
-        android:layout_alignTop="@+id/location"
-        android:layout_alignRight="@+id/location"
-        android:layout_alignEnd="@+id/location"
-        android:layout_marginTop="73dp" />
+        android:text="@string/upload"
+        android:textColor="#78ffffff"
+        android:textSize="12sp" />
 
 
     <Button
         android:id="@+id/btn_login_register"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:background="#50e3c2"
-        android:layout_marginTop="50dp"
+        android:layout_alignEnd="@+id/btn_photo"
+        android:layout_alignRight="@+id/btn_photo"
+        android:layout_below="@+id/switch1"
         android:layout_marginLeft="16dp"
+        android:layout_marginTop="50dp"
+        android:background="#50e3c2"
         android:singleLine="true"
         android:text="@string/register"
-        android:textColor="#fff"
         android:textAllCaps="false"
-        android:layout_below="@+id/switch1"
-        android:layout_alignRight="@+id/btn_photo"
-        android:layout_alignEnd="@+id/btn_photo" />
+        android:textColor="#fff" />
 
 
     <Button
-        android:id="@+id/btn_new_user"
+        android:id="@+id/already_user"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#00ffffff"
         android:layout_below="@+id/btn_login_register"
-        android:layout_centerInParent="true"
+
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="#00ffffff"
         android:singleLine="true"
         android:text="@string/already_user"
-        android:textColor="@color/white"
-        android:textAllCaps="false" />
+        android:textAllCaps="false"
+        android:textColor="#78ffffff" />
 
 </RelativeLayout>
