@@ -23,7 +23,7 @@ public class MyApp extends Application {
         // [Optional] Power your app with Local Datastore. For more info, go to
         // https://parse.com/docs/android/guide#local-datastore
         Parse.enableLocalDatastore(this);
-        Parse.initialize(this, "Ta7BNoIwUmtLRi6G84aWLEheZEqfAgb3OzhcPZ8l", "07Fyt5jATKsQLgwwAW5PCziFjOYqaV8gQWZN7I6L");
+        Parse.initialize(this);
 
     }
 
