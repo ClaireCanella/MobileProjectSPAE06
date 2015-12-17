@@ -72,13 +72,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MyApp.getInstance(), SignUpActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
         mBtnLogin = (Button) findViewById(R.id.btn_login);
         mBtnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(final View v) {
+            public void onClick(View v) {
                 String email = mEmailLogin_EditText.getText().toString();
                 String password = mPwdLogin_EditText.getText().toString();
 
@@ -95,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
                     }else {
                         Intent intent = new Intent(MyApp.getInstance(), UserProfileActivity.class);
                         startActivity(intent);
+                        finish();
                     };
 
 

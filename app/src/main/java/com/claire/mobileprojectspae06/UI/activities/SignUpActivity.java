@@ -42,7 +42,6 @@ public class SignUpActivity extends AppCompatActivity {
         usernameField = (EditText) findViewById(R.id.username);
         locationField = (EditText) findViewById(R.id.location);
         switch1Field = (Switch) findViewById(R.id.switch1);
-        btnPhotoField = (Button) findViewById(R.id.btn_photo);
 
         validateBtn = (Button) findViewById(R.id.btn_login_register);
 
