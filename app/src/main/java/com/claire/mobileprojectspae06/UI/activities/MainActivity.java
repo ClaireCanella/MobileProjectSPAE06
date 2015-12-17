@@ -10,16 +10,18 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.claire.mobileprojectspae06.MyApp;
 import com.claire.mobileprojectspae06.R;
 import com.claire.mobileprojectspae06.UI.adapters.AnimalsAdapter;
+
 import com.parse.LogInCallback;
 import com.parse.ParseObject;
 import com.parse.ParseUser;
-
 import java.util.ArrayList;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
     protected Button mBtnValidateLogin;
     protected Button mBtnNewUser;
     protected Button mBtnLogin;
-
     private ImageView mImageView;
 
 
@@ -42,18 +43,31 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        //setSupportActionBar(toolbar);
+
        /*ParseUser currentUser = ParseUser.getCurrentUser();
         if (currentUser == null) {
             Intent intent = new Intent(MyApp.getInstance(), LoginActivity.class);
             startActivity(intent);
         }*/
 
-
         mEmailLogin_EditText = (EditText)findViewById(R.id.email_address);
         mPwdLogin_EditText = (EditText)findViewById(R.id.password);
         mBtnValidateLogin = (Button)findViewById(R.id.btn_login);
         mBtnNewUser = (Button) findViewById(R.id.btn_new_user);
         mBtnLogin = (Button) findViewById(R.id.btn_login);
+        //mImageView = (ImageView) findViewById(R.id.imgView);
+        //btnCapture = (Button) findViewById(R.id.btnCapture);
+        /*btnCapture.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
+                    startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
+                }
+            }
+        });*/
 
 
         mBtnNewUser = (Button) findViewById(R.id.btn_new_user);
@@ -97,9 +111,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        ParseObject testObject = new ParseObject("TestObject");
+        /*ParseObject testObject = new ParseObject("TestObject");
         testObject.put("foo", "bar");
-        testObject.saveInBackground();
+        testObject.saveInBackground();*/
     }
 
     @Override
