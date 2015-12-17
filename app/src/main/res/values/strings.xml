@@ -13,7 +13,7 @@
     <!-- SIGNUP -->
     <string name="pseudo">PSEUDO</string>
     <string name="phone_number">NUMÉRO DE TÉLÉPHONE</string>
-    <string name="location">DÉPARTEMENT</string>
+    <string name="location">VILLE</string>
     <string name="register">S\'inscrire</string>
     <string name="already_user"><u>J\'ai déjà un compte</u></string>
     <string name="dog">CHIEN</string>
@@ -22,4 +22,12 @@
     <string name="title_activity_user_profile">UserProfile</string>
     <string name="title_activity_signup">Signup</string>
 
+    <!-- BDD USER -->
+    <string name="username1">Charlotte</string>
+    <string name="userlocation">Aix-en-Provence (13)</string>
+
+    
+    <!-- BDD PET -->
+    <string name="favoritedog">Préférence pour les chiens</string>
+    <string name="favoritecat">Préférence pour les chats</string>
 </resources>

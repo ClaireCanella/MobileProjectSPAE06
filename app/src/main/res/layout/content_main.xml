@@ -112,7 +112,7 @@
         android:layout_marginTop="34dp"
         android:singleLine="true"
         android:text="@string/btn_new_user"
-        android:textColor="@color/white"
+        android:textColor="#78ffffff"
         android:textAllCaps="false" />
 
 </RelativeLayout>
