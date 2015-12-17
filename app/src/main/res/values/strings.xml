@@ -19,5 +19,7 @@
     <string name="dog">CHIEN</string>
     <string name="cat">CHAT</string>
     <string name="upload">VOTRE PHOTO</string>
+    <string name="title_activity_user_profile">UserProfile</string>
+    <string name="title_activity_signup">Signup</string>
 
 </resources>
