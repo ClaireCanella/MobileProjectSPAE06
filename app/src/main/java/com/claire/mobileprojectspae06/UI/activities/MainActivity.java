@@ -20,14 +20,15 @@ import com.claire.mobileprojectspae06.UI.adapters.AnimalsAdapter;
 import com.parse.LogInCallback;
 import com.parse.ParseObject;
 import com.parse.ParseUser;
+
 import java.util.ArrayList;
 
 
 import com.parse.LogInCallback;
 import com.parse.ParseObject;
 import com.parse.ParseUser;
-import java.util.ArrayList;
 
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -56,12 +57,11 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }*/
 
-        mEmailLogin_EditText = (EditText)findViewById(R.id.email_address);
-        mPwdLogin_EditText = (EditText)findViewById(R.id.password);
-        mBtnValidateLogin = (Button)findViewById(R.id.btn_login);
+        mEmailLogin_EditText = (EditText) findViewById(R.id.email_address);
+        mPwdLogin_EditText = (EditText) findViewById(R.id.password);
+        mBtnValidateLogin = (Button) findViewById(R.id.btn_login);
         mBtnNewUser = (Button) findViewById(R.id.btn_new_user);
         mBtnLogin = (Button) findViewById(R.id.btn_login);
-
 
         //mImageView = (ImageView) findViewById(R.id.imgView);
         //btnCapture = (Button) findViewById(R.id.btnCapture);
