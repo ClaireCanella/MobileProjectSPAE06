@@ -53,7 +53,7 @@
         <activity
             android:name=".UI.activities.LoginActivity"
             android:label="Login view"
-            android:theme="@style/AppTheme.NoActionBar" >>
+            android:theme="@style/AppTheme.NoActionBar" >
         </activity>
     </application>
 
