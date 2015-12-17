@@ -39,11 +39,11 @@
         android:layout_alignStart="@+id/logo" />
 
     <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_centerHorizontal="true"
-        android:id="@+id/relativeLayout"
         android:layout_marginTop="198dp">
         <View
             android:id="@+id/myRectangleView"
@@ -90,10 +90,10 @@
         app:met_floatingLabel="normal"/>
 
     <Button
+        android:id="@+id/btn_login"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:background="@color/colorApp"
-        android:id="@+id/btn_login"
         android:layout_below="@+id/password"
         android:layout_marginTop="34dp"
         android:layout_marginLeft="16dp"
@@ -103,10 +103,10 @@
 
 
     <Button
+        android:id="@+id/btn_new_user"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#00ffffff"
-        android:id="@+id/btn_new_user"
         android:layout_below="@+id/btn_login"
         android:layout_centerInParent="true"
         android:layout_marginTop="34dp"
