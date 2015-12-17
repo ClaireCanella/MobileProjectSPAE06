@@ -8,13 +8,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Switch;
 import android.widget.Toast;
 
 import com.claire.mobileprojectspae06.MyApp;
 import com.claire.mobileprojectspae06.R;
 import com.parse.ParseException;
 import com.parse.ParseUser;
-import com.parse.SaveCallback;
 import com.parse.SignUpCallback;
 
 
@@ -25,6 +25,10 @@ public class SignUpActivity extends AppCompatActivity {
 
     private EditText emailField;
     private EditText pwdField;
+    private EditText usernameField;
+    private EditText locationField;
+    private Switch switch1Field;
+    private Button btnPhotoField;
     private Button validateBtn;
     private Button mAlreadyUser;
 
@@ -35,6 +39,10 @@ public class SignUpActivity extends AppCompatActivity {
 
         emailField = (EditText) findViewById(R.id.email_address);
         pwdField = (EditText) findViewById(R.id.password);
+        usernameField = (EditText) findViewById(R.id.username);
+        locationField = (EditText) findViewById(R.id.location);
+        switch1Field = (Switch) findViewById(R.id.switch1);
+        btnPhotoField = (Button) findViewById(R.id.btn_photo);
 
         validateBtn = (Button) findViewById(R.id.btn_login_register);
 
@@ -43,17 +51,28 @@ public class SignUpActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String email = emailField.getText().toString();
                 String pwd = pwdField.getText().toString();
+                String username = usernameField.getText().toString();
+                String location = locationField.getText().toString();
+                Switch switchAnimal = switch1Field;
 
-                email = email.trim();
+                email = email.trim();//évite d'avoir des espaces à l'auto-complete
                 pwd = pwd.trim();
+                username = username.trim();
+                location = location.trim();
 
-                if (email.isEmpty() || pwd.isEmpty()) {
-                    Toast.makeText(MyApp.getContext(), "Your email or password is empty", Toast.LENGTH_SHORT).show();
+
+                /*
+                if (email.isEmpty() || pwd.isEmpty() || username.isEmpty() || location.isEmpty()) {
+                    Toast.makeText(MyApp.getContext(), "A field is empty", Toast.LENGTH_SHORT).show();
                 } else {
 
-                    final ParseUser newUser = new ParseUser();
+                    ParseUser newUser = new ParseUser();
                     newUser.setEmail(email);
                     newUser.setPassword(pwd);
+                    newUser.setUsername(username);
+                    newUser.setLocation(location);
+                    newUser.setAnimal(switchAnimal);
+
                     newUser.signUpInBackground(new SignUpCallback() {
                         public void done(ParseException e) {
                             if (e == null) {
@@ -67,7 +86,7 @@ public class SignUpActivity extends AppCompatActivity {
                         }
 
                     });
-                }
+                }*/
             }
         });
 

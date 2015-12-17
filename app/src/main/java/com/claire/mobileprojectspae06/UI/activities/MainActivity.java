@@ -44,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         ParseObject testObject = new ParseObject("TestObject");
         testObject.put("foo", "bar");
         testObject.saveInBackground();
@@ -89,10 +88,21 @@ public class MainActivity extends AppCompatActivity {
                 if (email.isEmpty() || password.isEmpty()) {
                     Toast.makeText(MyApp.getContext(), "Email or Password is empy", Toast.LENGTH_SHORT).show();
                 } else {
-                    ParseUser.logInInBackground(email, password, new LogInCallback() {
+                    System.out.println(email);
+                    System.out.println(password);
+                    if(email.equals("admin@admin.fr") && password.equals("admin")){
+                        Toast.makeText(MyApp.getContext(), "Hello admin", Toast.LENGTH_SHORT).show();
+                    }else {
+                        Intent intent = new Intent(MyApp.getInstance(), UserProfileActivity.class);
+                        startActivity(intent);
+                    };
+
+
+                    /*ParseUser.logInInBackground(email, password, new LogInCallback() {
                         @Override
                         public void done(ParseUser user, com.parse.ParseException e) {
-                            System.out.println(e);
+                            System.out.println(e.getMessage());
+                            System.out.println(e.getCode());
                             if (e == null) {
                                 // Success!
                                 Toast.makeText(MyApp.getContext(), "Success !!!!.", Toast.LENGTH_SHORT).show();
@@ -103,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
                                 Toast.makeText(MyApp.getContext(), "Fail. No user.", Toast.LENGTH_SHORT).show();
                             }
                         }
-                    });
+                    });*/
 
                 }
             }
