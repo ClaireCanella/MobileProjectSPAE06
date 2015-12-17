@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".UI.activities.UserPetProfile"
+    tools:showIn="@layout/activity_user_pet_profile">
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/imageView5"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:src="@drawable/img_youpi" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="9sp"
+                android:textColor="@color/colorApp"
+                android:text="@string/interested"
+                android:layout_alignBottom="@+id/petrace"
+                android:layout_alignStart="@+id/username"
+                android:layout_marginStart="10dp" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/username"
+                android:layout_toEndOf="@+id/username"
+                android:layout_toRightOf="@+id/username"
+                android:letterSpacing="0.1"
+                android:text="@string/petname1"
+                android:textColor="@color/colorApp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/urgent"
+                android:layout_marginTop="5dp"
+                android:layout_alignTop="@+id/textView3"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/imageView4" />
+
+            <!-- birthday -->
+            <ImageView
+                android:id="@+id/iconbirtdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView3"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@+id/username"
+                android:layout_toRightOf="@+id/username"
+                android:src="@drawable/icon_birthday" />
+
+            <TextView
+                android:id="@+id/petbirthday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/iconbirtdate"
+                android:layout_marginBottom="-3dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/iconbirtdate"
+                android:layout_toRightOf="@+id/iconbirtdate"
+                android:text="@string/petbirthday"
+                android:textSize="12sp"
+                android:textColor="@color/textColor"/>
+
+            <!-- gender -->
+            <ImageView
+                android:id="@+id/icongender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_gender"
+                android:paddingRight="1dp"
+                android:layout_alignBottom="@+id/iconbirtdate"
+                android:layout_toStartOf="@+id/petgender" /> "
+                android:layout_above="@+id/icontemper"
+                android:layout_centerHorizontal="true"
+                />
+
+            <TextView
+                android:id="@+id/petgender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/petgender"
+                android:textSize="12sp"
+                android:textColor="@color/textColor"
+                android:layout_marginLeft="8dp"
+                android:layout_gravity="right"
+                android:layout_alignTop="@+id/petbirthday"
+                android:layout_alignRight="@+id/petrace"
+                android:layout_alignEnd="@+id/petrace" />
+
+            <!-- size -->
+            <ImageView
+                android:id="@+id/iconlocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_taille"
+                android:layout_marginLeft="26dp"
+                android:layout_marginStart="26dp"
+                android:layout_alignBottom="@+id/icongender"
+                android:layout_toRightOf="@+id/petgender"
+                android:layout_toEndOf="@+id/petgender" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/petsize"
+                android:textSize="12sp"
+                android:textColor="@color/textColor"
+                android:layout_marginLeft="9dp"
+                android:layout_marginStart="9dp"
+                android:layout_alignTop="@+id/iconbirtdate"
+                android:layout_toEndOf="@+id/iconlocation" />
+
+
+
+
+            <!-- temper -->
+            <ImageView
+                android:id="@+id/icontemper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_mood"
+                android:layout_alignBottom="@+id/username"
+                android:layout_toEndOf="@+id/username"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/pettemper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pettemper"
+                android:textSize="12sp"
+                android:textColor="@color/textColor"
+                android:layout_alignTop="@+id/icontemper"
+                android:layout_alignStart="@+id/petbirthday" />
+
+            <!-- race -->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_patte"
+                android:id="@+id/imageView3"
+                android:layout_alignTop="@+id/petrace"
+                android:layout_toEndOf="@+id/username" />
+
+            <TextView
+                android:id="@+id/petrace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/petrace"
+                android:textSize="12sp"
+                android:textColor="@color/textColor"
+                android:layout_above="@+id/pet1"
+                android:layout_alignStart="@+id/pettemper" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#e3e3e3"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="30dp"
+                android:layout_above="@+id/pet2"
+                android:layout_alignParentStart="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/location"
+                    android:layout_marginTop="5dp"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="@string/refugename"
+                    android:textAllCaps="false"
+                    android:textColor="#727272"
+                    android:textSize="12sp"
+                    android:textStyle="normal"
+                    android:layout_marginLeft="10dp"
+                    android:singleLine="true"
+                    android:background="@color/transparent"/>
+            </LinearLayout>
+
+
+            <!-- PET1 -->
+            <ImageView
+                android:id="@+id/pet1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/youpi_1"
+                android:layout_below="@+id/username"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="56dp" />
+
+
+            <!-- PET2 -->
+            <ImageView
+                android:id="@+id/pet2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/pet1"
+                android:layout_toEndOf="@+id/pet1"
+                android:layout_toRightOf="@+id/pet1"
+                android:src="@drawable/youpi_2" />
+
+            <!-- PET3 -->
+            <ImageView
+                android:id="@+id/pet3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/pet2"
+                android:layout_toEndOf="@+id/pet2"
+                android:layout_toRightOf="@+id/pet2"
+                android:src="@drawable/youpi_3" />
+
+
+            <!-- PET4 -->
+            <ImageView
+                android:id="@+id/pet4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/pet1"
+                android:src="@drawable/youpi_4" />
+
+
+            <!-- PET5 -->
+            <ImageView
+                android:id="@+id/pet5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/pet4"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/youpi_5" />
+
+            <!-- PET6 -->
+            <ImageView
+                android:id="@+id/pet6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/pet3"
+                android:src="@drawable/youpi_6" />
+
+            <!-- PET7 -->
+            <ImageView
+                android:id="@+id/pet7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/youpi_7"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true" />
+
+
+            <!-- PET8 -->
+            <ImageView
+                android:id="@+id/pet8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pet5"
+                android:layout_toEndOf="@+id/pet4"
+                android:layout_toRightOf="@+id/pet4"
+                android:src="@drawable/youpi_8" />
+
+            <!-- PET9 -->
+            <ImageView
+                android:id="@+id/pet9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/pet8"
+                android:src="@drawable/youpi_9" />
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</RelativeLayout>
