@@ -10,7 +10,6 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.claire.mobileprojectspae06.MyApp;
@@ -18,15 +17,9 @@ import com.claire.mobileprojectspae06.R;
 import com.claire.mobileprojectspae06.UI.adapters.AnimalsAdapter;
 
 import com.parse.LogInCallback;
-import com.parse.ParseObject;
 import com.parse.ParseUser;
 import java.util.ArrayList;
 
-
-import com.parse.LogInCallback;
-import com.parse.ParseObject;
-import com.parse.ParseUser;
-import java.util.ArrayList;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -119,10 +112,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
-        /*ParseObject testObject = new ParseObject("TestObject");
-        testObject.put("foo", "bar");
-        testObject.saveInBackground();*/
     }
 
     @Override
