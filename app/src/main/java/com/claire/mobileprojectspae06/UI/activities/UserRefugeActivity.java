@@ -11,16 +11,19 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.claire.mobileprojectspae06.MyApp;
 import com.claire.mobileprojectspae06.R;
 import com.google.android.gms.common.api.GoogleApiClient;
 
+import org.w3c.dom.Text;
+
 public class UserRefugeActivity extends AppCompatActivity {
 
     private ImageView btnCall;
-    private ImageView btnEmail;
+    private TextView btnEmail;
     private GoogleApiClient mGoogleApiClient;
 
     @Override
@@ -54,7 +57,7 @@ public class UserRefugeActivity extends AppCompatActivity {
             }
         });
 
-        btnEmail = (ImageView) findViewById(R.id.imageView10);
+        btnEmail = (TextView) findViewById(R.id.textView7);
         btnEmail.setOnClickListener(new View.OnClickListener() {
             @Override
             //POur envoyer un mail
@@ -72,6 +75,8 @@ public class UserRefugeActivity extends AppCompatActivity {
                 }
             }
         });
+
+
 
 
     }

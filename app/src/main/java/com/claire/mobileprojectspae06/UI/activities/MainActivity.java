@@ -95,8 +95,7 @@ public class MainActivity extends AppCompatActivity {
                         Intent intent = new Intent(MyApp.getInstance(), UserProfileActivity.class);
                         startActivity(intent);
                         finish();
-                    }
-                    ;
+                    };
 
 
                     /*ParseUser.logInInBackground(email, password, new LogInCallback() {
