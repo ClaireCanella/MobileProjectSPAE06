@@ -16,9 +16,11 @@ import android.widget.Toast;
 
 import com.claire.mobileprojectspae06.MyApp;
 import com.claire.mobileprojectspae06.R;
-import com.parse.ParseException;
-import com.parse.ParseUser;
-import com.parse.SignUpCallback;
+
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.GoogleApiClient.Builder;
+import com.google.android.gms.location.places.Places;
+
 
 
 /**
@@ -34,7 +36,7 @@ public class SignUpActivity extends AppCompatActivity {
     private ImageButton btnPhoto;
     private Button validateBtn;
     private Button mAlreadyUser;
-    //private GoogleApiClient mGoogleApiClient;
+    private GoogleApiClient mGoogleApiClient;
 
 
     static final int REQUEST_IMAGE_CAPTURE = 1;
@@ -43,6 +45,8 @@ public class SignUpActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
+        
+
 
         emailField = (EditText) findViewById(R.id.email_address);
         pwdField = (EditText) findViewById(R.id.password);
@@ -118,6 +122,11 @@ public class SignUpActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        mGoogleApiClient.connect();
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -143,5 +152,11 @@ public class SignUpActivity extends AppCompatActivity {
             Bitmap imageBitmap = (Bitmap) extras.get("data");
             //mImageView.setImageBitmap(imageBitmap);
         }
+    }
+
+    @Override
+    protected void onStop() {
+        mGoogleApiClient.disconnect();
+        super.onStop();
     }
 }

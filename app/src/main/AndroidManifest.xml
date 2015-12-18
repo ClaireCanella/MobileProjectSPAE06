@@ -12,6 +12,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:name=".MyApp"
@@ -26,6 +27,9 @@
         <meta-data
             android:name="com.parse.CLIENT_KEY"
             android:value="07Fyt5jATKsQLgwwAW5PCziFjOYqaV8gQWZN7I6L" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAaEeubcaqGeYy2cyz2jw9A8NIy0ertobc"/>
 
         <activity
             android:name=".UI.activities.MainActivity"
