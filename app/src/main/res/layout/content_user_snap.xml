@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".UI.activities.UserSnapActivity"
+    tools:showIn="@layout/activity_user_snap"
+    android:background="@drawable/bitmap">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorApp"
+        android:text="@string/new_pet_snap"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:paddingTop="17dp"
+        android:paddingLeft="36dp"
+        android:paddingBottom="19dp"
+        android:paddingRight="45dp"
+        android:id="@+id/textView8" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/close"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/imageButton" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#aa242424"
+        android:layout_gravity="bottom"
+        android:text="@string/petname13"
+        android:textColor="@color/white"
+        android:padding="20dp"
+        android:textSize="14sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textView9" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/petrace1"
+        android:textColor="#b3b3b3"
+        android:textSize="12sp"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="96dp"
+        android:id="@+id/textView10" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/btn_love_big"
+        android:id="@+id/imageView12"
+        android:layout_marginBottom="5dp"
+        android:layout_alignBottom="@+id/textView10"
+        android:layout_toStartOf="@+id/imageView13"
+        android:layout_marginEnd="6dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/btn_call_big"
+        android:layout_marginRight="10dp"
+        android:id="@+id/imageView13"
+        android:layout_alignTop="@+id/imageView12"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

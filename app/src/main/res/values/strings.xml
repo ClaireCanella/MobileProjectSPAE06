@@ -44,7 +44,11 @@
     <string name="petname10">Paki</string>
     <string name="petname11">Snow</string>
     <string name="petname12">Pacca</string>
+    <string name="petname13">Bacchus</string>
     <string name="title_activity_user_dog_profile">userDogProfile</string>
+
+    <!-- pet's race -->
+    <string name="petrace1">Golden Retriever</string>
 
     <!-- dog profile -->
     <string name="petbirthday">2 ans</string>
@@ -62,4 +66,10 @@
     <string name="refuge_city">10410 Saint Parres aux Tertres</string>
     <string name="refuge_schedule">Ouvert tous les jours de 9:00 à 19:30</string>
     <string name="refuge_mail">stparreauxtertres@la-spa.fr</string>
+    <string name="title_activity_user_snap">UserSnap</string>
+
+
+    <!-- BDD SNAP -->
+    <string name="new_pet_snap">Un nouvel arrivant au refuge, il s\'appelle Bacchus et est en forme !</string>
+    <string name="title_activity_splash_screen">SplashScreen</string>
 </resources>

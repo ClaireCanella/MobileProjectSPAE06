@@ -32,7 +32,7 @@ public class UserProfileActivity extends AppCompatActivity {
         snap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MyApp.getInstance(), MainActivity.class);
+                Intent intent = new Intent(MyApp.getInstance(), UserSnapActivity.class);
                 startActivity(intent);
             }
         });

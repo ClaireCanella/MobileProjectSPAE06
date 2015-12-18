@@ -1,7 +1,9 @@
 package com.claire.mobileprojectspae06.UI.activities;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -15,6 +17,12 @@ import android.widget.Toast;
 import com.claire.mobileprojectspae06.MyApp;
 import com.claire.mobileprojectspae06.R;
 import com.claire.mobileprojectspae06.UI.adapters.AnimalsAdapter;
+
+import com.google.android.gms.appindexing.AppIndex;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.parse.LogInCallback;
+import com.parse.ParseObject;
+import com.parse.ParseUser;
 
 import java.util.ArrayList;
 
@@ -33,6 +41,11 @@ public class MainActivity extends AppCompatActivity {
 
 
     static final int REQUEST_IMAGE_CAPTURE = 1;
+    /**
+     * ATTENTION: This was auto-generated to implement the App Indexing API.
+     * See https://g.co/AppIndexing/AndroidStudio for more information.
+     */
+    private GoogleApiClient client;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -106,6 +119,9 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
     @Override
@@ -140,6 +156,7 @@ public class MainActivity extends AppCompatActivity {
             imageView.setImageBitmap(imageBitmap);
         }
     }
+
 
 
 }
