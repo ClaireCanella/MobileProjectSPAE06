@@ -36,7 +36,6 @@ public class SignUpActivity extends AppCompatActivity {
     private ImageButton btnPhoto;
     private Button validateBtn;
     private Button mAlreadyUser;
-    private GoogleApiClient mGoogleApiClient;
 
 
     static final int REQUEST_IMAGE_CAPTURE = 1;
@@ -45,7 +44,7 @@ public class SignUpActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
-        
+
 
 
         emailField = (EditText) findViewById(R.id.email_address);
@@ -123,12 +122,6 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onStart() {
-        super.onStart();
-        mGoogleApiClient.connect();
-    }
-
-    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
@@ -152,11 +145,5 @@ public class SignUpActivity extends AppCompatActivity {
             Bitmap imageBitmap = (Bitmap) extras.get("data");
             //mImageView.setImageBitmap(imageBitmap);
         }
-    }
-
-    @Override
-    protected void onStop() {
-        mGoogleApiClient.disconnect();
-        super.onStop();
     }
 }

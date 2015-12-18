@@ -16,11 +16,6 @@ import com.claire.mobileprojectspae06.MyApp;
 import com.claire.mobileprojectspae06.R;
 import com.claire.mobileprojectspae06.UI.adapters.AnimalsAdapter;
 
-import com.claire.mobileprojectspae06.UserProfile;
-import com.parse.LogInCallback;
-import com.parse.ParseObject;
-import com.parse.ParseUser;
-
 import java.util.ArrayList;
 
 
@@ -44,26 +39,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ParseObject testObject = new ParseObject("TestObject");
+        /*ParseObject testObject = new ParseObject("TestObject");
         testObject.put("foo", "bar");
-        testObject.saveInBackground();
+        testObject.saveInBackground();*/
 
         mEmailLogin_EditText = (EditText)findViewById(R.id.email_address);
         mPwdLogin_EditText = (EditText)findViewById(R.id.password);
         mBtnNewUser = (Button) findViewById(R.id.btn_new_user);
         mBtnLogin = (Button) findViewById(R.id.btn_login);
-
-        //mImageView = (ImageView) findViewById(R.id.imgView);
-        //btnCapture = (Button) findViewById(R.id.btnCapture);
-        /*btnCapture.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
-                    startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
-                }
-            }
-        });*/
 
 
         mBtnNewUser = (Button) findViewById(R.id.btn_new_user);
