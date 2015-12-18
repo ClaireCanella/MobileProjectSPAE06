@@ -57,10 +57,14 @@
         <activity
             android:name=".UI.activities.UserPetProfileActivity"
             android:label="@string/title_activity_user_dog_profile"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".UI.activities.UserProfileActivity"
             android:label="@string/title_activity_user_profile"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".UI.activities.UserRefuge"
+            android:label="@string/title_activity_user_refuge"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

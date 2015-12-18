@@ -130,7 +130,6 @@
         android:switchPadding="10dp"
         android:text="@string/dog"
         android:textColor="#78ffffff"
-
         android:textSize="12sp" />
 
     <TextView
@@ -151,11 +150,11 @@
         android:id="@+id/btn_photo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/btn_love"
+        android:src="@drawable/btn_snap"
         android:background="@color/transparent"
-        android:layout_alignTop="@+id/switch1"
-        android:layout_toRightOf="@+id/relativeLayout"
-        android:layout_toEndOf="@+id/relativeLayout" />
+        android:layout_below="@+id/location"
+        android:layout_toEndOf="@+id/relativeLayout"
+        android:layout_marginTop="27dp" />
 
 
     <Button
