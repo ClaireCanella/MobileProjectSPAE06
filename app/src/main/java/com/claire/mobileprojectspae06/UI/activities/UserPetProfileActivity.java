@@ -28,21 +28,15 @@ public class UserPetProfileActivity extends AppCompatActivity {
         refuge.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent (MyApp.getInstance(), UserRefuge.class);
-                startActivity(intent);
-                /*Intent callIntent = new Intent(Intent.ACTION_CALL);
+                /*Intent intent = new Intent (MyApp.getInstance(), MainActivity.class);
+                startActivity(intent);*/
+                Intent callIntent = new Intent(Intent.ACTION_CALL);
                 callIntent.setData(Uri.parse("tel:0630481339"));
-                if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-                    // TODO: Consider calling
-                    //    ActivityCompat#requestPermissions
-                    // here to request the missing permissions, and then overriding
-                    //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                    //                                          int[] grantResults)
-                    // to handle the case where the user grants the permission. See the documentation
-                    // for ActivityCompat#requestPermissions for more details.
-                    return;
+                if (ActivityCompat.checkSelfPermission(MyApp.getContext(), Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                    Toast.makeText(MyApp.getContext(), "Not permit", Toast.LENGTH_SHORT).show();
+                }else {
+                    startActivity(callIntent);
                 }
-                startActivity(callIntent);*/
 
             }
         });
