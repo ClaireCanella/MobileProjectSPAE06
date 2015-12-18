@@ -180,7 +180,8 @@
                 android:paddingBottom="10dp"
                 android:paddingLeft="30dp"
                 android:layout_above="@+id/pet2"
-                android:layout_alignParentStart="true">
+                android:layout_alignParentStart="true"
+                android:id="@+id/linearLayout">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -191,7 +192,7 @@
                     android:id="@+id/refuge"
                     android:layout_width="wrap_content"
                     android:layout_height="20dp"
-                    android:text="@string/refugename"
+                    android:text="@string/refuge_name"
                     android:textAllCaps="false"
                     android:textColor="#727272"
                     android:textSize="12sp"
@@ -199,7 +200,9 @@
                     android:layout_marginLeft="10dp"
                     android:singleLine="true"
                     android:background="@color/transparent"/>
+
             </LinearLayout>
+
 
 
             <!-- PET1 -->
@@ -293,6 +296,22 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignTop="@+id/pet8"
                 android:src="@drawable/youpi_9" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/btn_call"
+                android:layout_marginTop="40dp"
+                android:paddingRight="10dp"
+                android:layout_below="@+id/petrace"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/imageView11" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/btn_love"
+                android:layout_alignTop="@+id/imageView11"
+                android:layout_alignStart="@+id/iconlocation" />
 
         </RelativeLayout>
 

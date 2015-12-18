@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Mobile Project SPA E06</string>
+    <string name="app_name">Coup de patte</string>
     <string name="action_settings">Settings</string>
 
     <!--  MAIN -->
@@ -55,5 +55,11 @@
     <string name="interested">4 intéressés</string>
 
     <!-- BDD REFUGE -->
-    <string name="refugename"><u>Refuge "de Menois"</u></string>
+    <string name="refuge_name"><u>Refuge de "Menois"</u></string>
+    <string name="refuge_name_upcase">REFUGE DE "MENOIS"</string>
+    <string name="title_activity_user_refuge">UserRefuge</string>
+    <string name="refuge_address">Route de Baires</string>
+    <string name="refuge_city">10410 Saint Parres aux Tertres</string>
+    <string name="refuge_schedule">Ouvert tous les jours de 9:00 à 19:30</string>
+    <string name="refuge_mail">stparreauxtertres@la-spa.fr</string>
 </resources>

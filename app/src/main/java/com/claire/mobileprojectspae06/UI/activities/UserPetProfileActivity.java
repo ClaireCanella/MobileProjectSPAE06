@@ -28,7 +28,7 @@ public class UserPetProfileActivity extends AppCompatActivity {
         refuge.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent (MyApp.getInstance(), MainActivity.class);
+                Intent intent = new Intent (MyApp.getInstance(), UserRefuge.class);
                 startActivity(intent);
                 /*Intent callIntent = new Intent(Intent.ACTION_CALL);
                 callIntent.setData(Uri.parse("tel:0630481339"));
