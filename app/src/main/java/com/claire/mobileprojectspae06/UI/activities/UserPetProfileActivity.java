@@ -35,6 +35,7 @@ public class UserPetProfileActivity extends AppCompatActivity {
             }
         });
 
+        //Bouton pour appeler directement le numéro entré au préalable
         btnCall = (ImageView) findViewById(R.id.imageView11);
         btnCall.setOnClickListener(new View.OnClickListener() {
             @Override

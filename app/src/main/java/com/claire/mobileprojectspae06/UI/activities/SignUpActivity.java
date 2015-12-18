@@ -12,15 +12,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Switch;
-import android.widget.Toast;
 
 import com.claire.mobileprojectspae06.MyApp;
 import com.claire.mobileprojectspae06.R;
-
-import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.common.api.GoogleApiClient.Builder;
-import com.google.android.gms.location.places.Places;
-
 
 
 /**
@@ -35,7 +29,7 @@ public class SignUpActivity extends AppCompatActivity {
     private Switch switch1Field;
     private ImageButton btnPhoto;
     private Button validateBtn;
-    private Button mAlreadyUser;
+    private Button alreadyUser;
 
 
     static final int REQUEST_IMAGE_CAPTURE = 1;
@@ -63,9 +57,8 @@ public class SignUpActivity extends AppCompatActivity {
             }
         });
 
-
+        //Récupération des données du formulaire lors du clique sur le bouton et insertion de ces données dans la BDD
         validateBtn = (Button) findViewById(R.id.btn_login_register);
-
         validateBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -75,13 +68,15 @@ public class SignUpActivity extends AppCompatActivity {
                 String location = locationField.getText().toString();
                 Switch switchAnimal = switch1Field;
 
-                email = email.trim();//évite d'avoir des espaces à l'auto-complete
+                //évite d'avoir des espaces à l'auto-complete
+                email = email.trim();
                 pwd = pwd.trim();
                 username = username.trim();
                 location = location.trim();
 
 
-                /*
+                /* Insert l'user dans la base de donnée Parse.com
+
                 if (email.isEmpty() || pwd.isEmpty() || username.isEmpty() || location.isEmpty()) {
                     Toast.makeText(MyApp.getContext(), "A field is empty", Toast.LENGTH_SHORT).show();
                 } else {
@@ -110,8 +105,9 @@ public class SignUpActivity extends AppCompatActivity {
             }
         });
 
-        mAlreadyUser = (Button) findViewById(R.id.already_user);
-        mAlreadyUser.setOnClickListener(new View.OnClickListener() {
+        //Lien pour revenir sur l'écran de connexion (MainActivity)
+        alreadyUser = (Button) findViewById(R.id.already_user);
+        alreadyUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MyApp.getInstance(), MainActivity.class);

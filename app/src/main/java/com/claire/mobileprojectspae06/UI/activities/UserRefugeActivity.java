@@ -5,26 +5,22 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.claire.mobileprojectspae06.MyApp;
 import com.claire.mobileprojectspae06.R;
 import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.location.places.Places;
 
 public class UserRefugeActivity extends AppCompatActivity {
 
     private ImageView btnCall;
+    private ImageView btnEmail;
     private GoogleApiClient mGoogleApiClient;
 
     @Override
@@ -44,6 +40,7 @@ public class UserRefugeActivity extends AppCompatActivity {
 
         btnCall = (ImageView) findViewById(R.id.imageView9);
         btnCall.setOnClickListener(new View.OnClickListener() {
+            //pour téléphoner directement avec le n°
             @Override
             public void onClick(View v) {
                 Intent callIntent = new Intent(Intent.ACTION_CALL);
@@ -56,6 +53,26 @@ public class UserRefugeActivity extends AppCompatActivity {
 
             }
         });
+
+        btnEmail = (ImageView) findViewById(R.id.imageView10);
+        btnEmail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            //POur envoyer un mail
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.setType("message/rfc822");
+                intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"recipient@example.com"});
+                intent.putExtra(Intent.EXTRA_SUBJECT, "subject of email");
+                intent.putExtra(Intent.EXTRA_TEXT, "body of email");
+                try {
+                    //choix du client pour envoyer le mail
+                    startActivity(Intent.createChooser(intent, "Send mail..."));
+                } catch (android.content.ActivityNotFoundException ex) {
+                    Toast.makeText(MyApp.getInstance(), "There are no email clients installed.", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
 
     }
 

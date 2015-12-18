@@ -27,6 +27,7 @@ public class UserProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_profile);
 
+        //Permet d'aller voir le snapchat reçu
         snap = (ImageView) findViewById(R.id.snap);
         snap.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,6 +37,7 @@ public class UserProfileActivity extends AppCompatActivity {
             }
         });
 
+        //Voir la fiche d'un chien
         pet1 = (ImageView) findViewById(R.id.pet1);
         pet1.setOnClickListener(new View.OnClickListener() {
             @Override

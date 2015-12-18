@@ -21,11 +21,11 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    protected EditText mEmailLogin_EditText;
-    protected EditText mPwdLogin_EditText;
-    protected Button mBtnNewUser;
-    protected Button mBtnLogin;
-    private ImageView mImageView;
+    protected EditText emailLogin_EditText;
+    protected EditText pwdLogin_EditText;
+    protected Button btnNewUser;
+    protected Button btnLogin;
+    private ImageView imageView;
 
 
     private AnimalsAdapter animalsAdapter;
@@ -43,14 +43,14 @@ public class MainActivity extends AppCompatActivity {
         testObject.put("foo", "bar");
         testObject.saveInBackground();*/
 
-        mEmailLogin_EditText = (EditText)findViewById(R.id.email_address);
-        mPwdLogin_EditText = (EditText)findViewById(R.id.password);
-        mBtnNewUser = (Button) findViewById(R.id.btn_new_user);
-        mBtnLogin = (Button) findViewById(R.id.btn_login);
+        emailLogin_EditText = (EditText)findViewById(R.id.email_address);
+        pwdLogin_EditText = (EditText)findViewById(R.id.password);
+        btnNewUser = (Button) findViewById(R.id.btn_new_user);
+        btnLogin = (Button) findViewById(R.id.btn_login);
 
-
-        mBtnNewUser = (Button) findViewById(R.id.btn_new_user);
-        mBtnNewUser.setOnClickListener(new View.OnClickListener() {
+        //Lien vers l'inscription
+        btnNewUser = (Button) findViewById(R.id.btn_new_user);
+        btnNewUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MyApp.getInstance(), SignUpActivity.class);
@@ -59,13 +59,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        mBtnLogin = (Button) findViewById(R.id.btn_login);
-        mBtnLogin.setOnClickListener(new View.OnClickListener() {
+        //Valide les champs entrés dans l'activité connexion
+        btnLogin = (Button) findViewById(R.id.btn_login);
+        btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email = mEmailLogin_EditText.getText().toString();
-                String password = mPwdLogin_EditText.getText().toString();
+                String email = emailLogin_EditText.getText().toString();
+                String password = pwdLogin_EditText.getText().toString();
 
+                //On enlève l'espace après
                 email = email.trim();
                 password = password.trim();
 
@@ -74,13 +76,14 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     System.out.println(email);
                     System.out.println(password);
-                    if(email.equals("admin@admin.fr") && password.equals("admin")){
+                    if (email.equals("admin@admin.fr") && password.equals("admin")) {
                         Toast.makeText(MyApp.getContext(), "Hello admin", Toast.LENGTH_SHORT).show();
-                    }else {
+                    } else {
                         Intent intent = new Intent(MyApp.getInstance(), UserProfileActivity.class);
                         startActivity(intent);
                         finish();
-                    };
+                    }
+                    ;
 
 
                     /*ParseUser.logInInBackground(email, password, new LogInCallback() {
@@ -134,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
-            mImageView.setImageBitmap(imageBitmap);
+            imageView.setImageBitmap(imageBitmap);
         }
     }
 
