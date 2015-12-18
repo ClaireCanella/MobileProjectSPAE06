@@ -70,5 +70,6 @@
 
 
     <!-- BDD SNAP -->
-    <string name="new_pet_snap">Un nouvel arrivant au refuge, il s'appelle Bacchus et est en forme !</string>
+    <string name="new_pet_snap">Un nouvel arrivant au refuge, il s\'appelle Bacchus et est en forme !</string>
+    <string name="title_activity_splash_screen">SplashScreen</string>
 </resources>

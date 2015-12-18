@@ -1,7 +1,9 @@
 package com.claire.mobileprojectspae06.UI.activities;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -17,6 +19,9 @@ import com.claire.mobileprojectspae06.R;
 import com.claire.mobileprojectspae06.UI.adapters.AnimalsAdapter;
 
 import com.claire.mobileprojectspae06.UserProfile;
+import com.google.android.gms.appindexing.Action;
+import com.google.android.gms.appindexing.AppIndex;
+import com.google.android.gms.common.api.GoogleApiClient;
 import com.parse.LogInCallback;
 import com.parse.ParseObject;
 import com.parse.ParseUser;
@@ -38,6 +43,11 @@ public class MainActivity extends AppCompatActivity {
 
 
     static final int REQUEST_IMAGE_CAPTURE = 1;
+    /**
+     * ATTENTION: This was auto-generated to implement the App Indexing API.
+     * See https://g.co/AppIndexing/AndroidStudio for more information.
+     */
+    private GoogleApiClient client;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,8 +58,8 @@ public class MainActivity extends AppCompatActivity {
         testObject.put("foo", "bar");
         testObject.saveInBackground();
 
-        mEmailLogin_EditText = (EditText)findViewById(R.id.email_address);
-        mPwdLogin_EditText = (EditText)findViewById(R.id.password);
+        mEmailLogin_EditText = (EditText) findViewById(R.id.email_address);
+        mPwdLogin_EditText = (EditText) findViewById(R.id.password);
         mBtnNewUser = (Button) findViewById(R.id.btn_new_user);
         mBtnLogin = (Button) findViewById(R.id.btn_login);
 
@@ -91,13 +101,14 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     System.out.println(email);
                     System.out.println(password);
-                    if(email.equals("admin@admin.fr") && password.equals("admin")){
+                    if (email.equals("admin@admin.fr") && password.equals("admin")) {
                         Toast.makeText(MyApp.getContext(), "Hello admin", Toast.LENGTH_SHORT).show();
-                    }else {
+                    } else {
                         Intent intent = new Intent(MyApp.getInstance(), UserProfileActivity.class);
                         startActivity(intent);
                         finish();
-                    };
+                    }
+                    ;
 
 
                     /*ParseUser.logInInBackground(email, password, new LogInCallback() {
@@ -120,6 +131,9 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
     @Override
@@ -154,6 +168,7 @@ public class MainActivity extends AppCompatActivity {
             mImageView.setImageBitmap(imageBitmap);
         }
     }
+
 
 
 }
