@@ -37,7 +37,6 @@ public class UserPetProfileActivity extends AppCompatActivity {
                 }else {
                     startActivity(callIntent);
                 }
-
             }
         });
     }
