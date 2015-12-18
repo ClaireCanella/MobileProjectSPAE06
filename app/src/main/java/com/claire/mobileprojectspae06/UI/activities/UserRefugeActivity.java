@@ -33,13 +33,13 @@ public class UserRefugeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_user_refuge);
 
 
-        mGoogleApiClient = new GoogleApiClient
+        /*mGoogleApiClient = new GoogleApiClient
                 .Builder(this)
                 .addApi(Places.GEO_DATA_API)
                 .addApi(Places.PLACE_DETECTION_API)
                 .addConnectionCallbacks((GoogleApiClient.ConnectionCallbacks) this)
                 .addOnConnectionFailedListener((GoogleApiClient.OnConnectionFailedListener) this)
-                .build();
+                .build();*/
 
 
         btnCall = (ImageView) findViewById(R.id.imageView9);
@@ -62,7 +62,7 @@ public class UserRefugeActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        mGoogleApiClient.connect();
+        //mGoogleApiClient.connect();
     }
 
     @Override
@@ -89,7 +89,7 @@ public class UserRefugeActivity extends AppCompatActivity {
 
     @Override
     protected void onStop() {
-        mGoogleApiClient.disconnect();
+        //mGoogleApiClient.disconnect();
         super.onStop();
     }
 
